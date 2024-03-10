@@ -1,0 +1,136 @@
+/* Reset default margin, padding, font, and box-sizing for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Set background color and margin for the entire page */
+body {
+    background-color: #c3b6ff; /* Light purplr background color */
+    margin: 0;
+}
+
+/* Style the container for the to-do app */
+.container {
+    max-width: 540px;
+    margin: 100px auto 20px; /* Center the container with top margin */
+}
+
+/* Style the to-do app itself with background, padding, and border-radius */
+.todo-app {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the heading with color, bottom margin, and font size */
+.todo-app h2 {
+    color: #621a48;
+    margin-bottom: 20px;
+}
+
+/* Style the row with flex display, space between content, and padding */
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ecf0f1;
+    border-radius: 30px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+/* Style the input with flex, border, outline, padding, and font size */
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 8px;
+    font-size: 14px;
+}
+
+/* Style the button with border, outline, padding, background, color, cursor, and border-radius */
+button {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    background: #6117ca;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+/* Style the list item with no bullets, padding, user-select, cursor, and relative position */
+ul li {
+    list-style: none;
+    font-size: 16px;
+    padding: 8px 5px; /* Adjusted the padding */
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Style the list item circle before pseudo-element with dimensions, border-radius, and background color */
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background-color: rgb(235, 249, 249);
+    top: 10px;
+    left: 5px;
+}
+
+/* Style checked list items with color, text decoration, and background color */
+ul li.checked {
+    color: #19a254;
+    text-decoration: line-through;
+}
+
+/* Style checked list item circle before pseudo-element with background color */
+ul li.checked::before {
+    background-color: #71bee0;
+}
+
+/* Style the close button with dimensions, font size, color, line height, text align, border-radius, and background color */
+ul li span {
+    position: absolute;
+    right: 5px;
+    top: 50%; /* Adjusted the top position to vertically center the button */
+    transform: translateY(-50%); /* Vertically center the button using transform */
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    color: #fff;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #3498db; /* Added background color for better visibility */
+    z-index: 1;
+}
+
+/* Style the close button hover state with background color and cursor */
+ul li span:hover {
+    background: #2980b9;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Style the unordered list within a list item for subtasks */
+ul li ul {
+    background-color: #f9f9f9; /* Light gray background color for subtasks */
+    padding: 8px;
+    border-radius: 8px;
+    margin-top: 5px;
+}
+
+/* Style subtask input and button with top margin */
+ul li ul input, ul li ul button {
+    margin-top: 5px;
+}
